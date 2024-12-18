@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C 18.08.2012 прошло</title>
+    <title>Отсчет времени с 18.08.2012</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,20 +13,23 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f0f0;
+            background-image: url('https://dimon271086.github.io/answer/img/rings-3.png'); /* Здесь укажите путь к изображению */
+            background-size: cover; /* Фон будет масштабироваться, сохраняя пропорции */
+            background-position: center; /* Фон будет выровнен по центру */
+            background-attachment: fixed; /* Фон будет фиксированным при прокрутке */
             color: #333;
         }
         .container {
             text-align: center;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон для контейнера */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             max-width: 90%;
-            width: 700px;
+            width: 500px;
         }
         h1 {
-            font-size: 30px;
+            font-size: 28px;
             margin-bottom: 20px;
             color: #2c3e50;
         }
@@ -36,11 +39,11 @@
             color: #e74c3c;
         }
         .time span {
-            font-size: 36px;
+            font-size: 34px;
             margin: 0 5px;
             color: #2c3e50;
         }
-        @media (max-width: 400px) {
+        @media (max-width: 600px) {
             .time {
                 font-size: 26px;
             }
@@ -53,7 +56,7 @@
 <body>
 
 <div class="container">
-    <h1>C 18.08.2012 прошло:</h1>
+    <h1>Время с 18.08.2012 прошло:</h1>
     <div class="time">
         <span id="years">0</span> лет
         <span id="days">0</span> дней
