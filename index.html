@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C 18.08.2012 прошло</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            width: 700px;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        .time {
+            font-size: 32px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        .time span {
+            font-size: 36px;
+            margin: 0 5px;
+            color: #2c3e50;
+        }
+        @media (max-width: 400px) {
+            .time {
+                font-size: 26px;
+            }
+            .time span {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>C 18.08.2012 прошло:</h1>
+    <div class="time">
+        <span id="years">0</span> лет
+        <span id="days">0</span> дней
+        <span id="hours">0</span> часов
+        <span id="minutes">0</span> минут
+        <span id="seconds">0</span> секунд
+    </div>
+</div>
+
+<script>
+    function updateTime() {
+        const startDate = new Date("2012-08-18T00:00:00Z");
+        const currentDate = new Date();
+
+        const diff = currentDate - startDate;
+
+        const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24)) % 365;
+        const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
+        const minutes = Math.floor(diff / (1000 * 60)) % 60;
+        const seconds = Math.floor(diff / 1000) % 60;
+
+        document.getElementById("years").textContent = years;
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = hours;
+        document.getElementById("minutes").textContent = minutes;
+        document.getElementById("seconds").textContent = seconds;
+    }
+
+    setInterval(updateTime, 1000);
+    updateTime();
+</script>
+
+</body>
+</html>
